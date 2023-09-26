@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.title</title>
+    <link rel="stylesheet" href="~/Styles.css" />
+</head>
+<body>
+    <div class="header">
+        <div class="title-section">
+            <p class="title">
+                Weather App
+            </p>
+        </div>
+        <ul class="nav-buttons">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </div>
+    <div class="content-page">
+        @RenderBody()
+    </div>
+
+    <div class="footer-section">
+        <p class="footer-text">Contact: +380984731897</p>
+    </div>
+</body>
+</html>

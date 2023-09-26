@@ -1,0 +1,36 @@
+﻿@{
+	ViewBag.title = "Details";
+
+	CityWeather current = Model;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="~/Styles.css" />
+</head>
+<body>
+	<div class="containers">
+		<div class="details-container container disable-blur disable-scale">
+			<div class="container-inner-text">
+				<div class="container-inner-left container-inner-size">
+					<div class="container-left-text">
+						<p class="city-name-details">@current.CityName</p>
+						<p class="date font">@current.DateAndTime.ToString("dd MMM yyyy")</p>
+						<p class="time font">@current.DateAndTime.ToShortTimeString()</p>
+					</div>
+				</div>
+				<div class="container-inner-right container-inner-size">
+					<div class="container-right-text">
+						<p class="temperature-degrees">@current.TemperatureFahrenheit</p>
+						<p class="temperature-sign sign-font">℉</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="back-to-home-page">
+		<a id="back-to-home-page-ref" href="/">Back to the Weather Home Page</a>
+	</div>
+</body>
+</html>
